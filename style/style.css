@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+/* COnstrução de Fontes Externas! */
+@font-face {
+    font-family: 'Animado';
+    src: url('../font/Dibujos\ Animados.otf') format(opentype);
+}
+
+/*Variáveis em CSS3: */
+:root{
+    height: auto;
+    --cor1: #44db88;
+    --cor2: #012b0b9d;
+    --corFundo: antiquewhite;
+
+    --fontPadrao: Arial, Helvetica, sans-serif;
+    --fontTitle: Animado, cursive; 
+}
+
+*{
+    margin: 0px auto;
+    padding: 0px;
+}
+
+p{
+    text-indent: 20px;
+}
+
+abbr{
+    text-decoration: solid;
+}
+
+body{
+    background-color: var(--corFundo)
+}
+
+header{
+    min-height: 110px;
+    background-color: aquamarine;
+    background-image: linear-gradient(0deg, var(--cor2), var(--cor1));
+    background-attachment: auto;
+    margin: auto;
+    padding-top: 10px;
+    box-shadow: 2px 0px 10px gray;
+
+}
+
+h1{
+    font-family: var(--fontTitle);
+    text-align: center;
+    font-size: 40px;
+    padding: 5px 0px;
+    margin-bottom: 15px;
+}
+
+nav{
+    padding: 0px 10px;
+}
+
+main ol{
+    columns: 2;
+}
+
+nav > a{
+    display: inline-flex;
+    background-color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: solid;
+    color: black;
+    border-radius: 5px;
+    box-shadow: inset 0px -17px 30px grey;
+    padding: 8px;
+    margin: 1.5px 1px;
+    transition-duration: 0.6s;
+}
+
+nav > a:hover{
+    background-color: aquamarine;
+    box-shadow: none;
+}
+
+/*Alturas máximas e mínimas são sempre necessários*/
+
+main{
+    background-color: white;
+    box-shadow: 2px 10px 20px gray;
+    max-width: 800px;
+    min-width: 300px;
+    margin: auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+}
+
+h2{
+    padding: 2px 5px;
+    background-image: linear-gradient(90deg, rgba(127, 255, 212, 0.582), transparent);
+    margin-bottom: 20px;
+}
+
+main a {
+    color: black;
+    text-decoration: solid;
+
+}
+
+/**/
+main a:hover{
+    color: red;
+}
+
+/**/
+main a:active{
+    color: #9c0a0ae1;
+}
+
+main  img.formato{
+    width: 50%;
+    margin: 10px auto;
+
+    /*Para que neja possível centralizar imagens é necessário transformá-la em tags do tipo block*/
+    display: block;
+}
+
+picture{
+    margin: 40px;
+}
+
+
+
+li{
+    font-family: var(--fontPadrao);
+    font-weight: 400;
+    font-size: 20px;
+    margin: 10px 0px 10px 40px;
+}
+
+aside p{
+
+    font-size: 1.3em;
+
+    /*Espaço entre as linhas do parágrafo.*/
+    line-height: 1.2em;
+}
+
+aside li{
+    font-family: cursive;
+}
+
+aside{
+    padding: 10px;
+}
+
+aside ul{
+     
+    /* Para modificar o icone inicial de cada item da lista é necessário o código dele via EMOJIPEDIA antecedido pelo contrabarra*/
+    /*A segunda contrabarra seguida do código 00A0 representa um espaço*/
+    /* Não é uma função compatível com todo navegador */
+    list-style-type: '\2714\00A0';
+
+    margin-top: 10px;
+
+    /* Faz com que as bolinhas da lista não fiquem para fora do bloco. O Outsite faz logicamente o contrario*/
+    list-style-position: inside;
+
+    columns: 2;
+}
+
+div.video{
+    background-color: white;
+    padding: 10px;
+
+    /*Acionar a posição relativa implica em poder ajustar o tamanho da janela que possui o video*/
+    position: relative;
+
+    /*Redimensiona as margens do próprio vídeo.*/
+    padding-bottom: 80%;
+    
+}
+
+div.video > iframe {
+
+    /* Acionar a posição absoluta implica em poder mexer nas coodenadas X e Y respectivamente left e top. 
+    Ainda assim é possível mexer no tamanho da janela do vídeo com width e height.*/
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 90%;
+}
+
+footer{
+    background-color: rgb(94, 94, 94);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+footer > p > a {
+    color: white;
+    text-decoration: solid;
+}
+
+footer > p > a:hover{
+    color: blue;
+}
+
+/* Margem negativa faz com que o contorno aumente de tamanho, ocupando o espaço constatado. */
+
+
+
